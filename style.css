@@ -1,0 +1,71 @@
+/* Apply global box-sizing rule and remove default margin/padding from all elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Center the calculator both vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Viewport height ensures full page centering */
+}
+
+/* Style the calculator container */
+.calculator {
+    background-color: rgba(0, 0, 0, 0.806); /* Dark background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    width: 300px; /* Set width of the calculator */
+    color: white; /* Text color */
+    box-shadow: 2px 2px 6px 0px rgb(7 7 7 / 81%); /* Subtle shadow for a 3D effect */
+}
+
+/* Style the display section where calculations are shown */
+.display {
+    width: 100%; /* Full width to match the calculator */
+    height: 150px; /* Height of the display */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    text-align: end; /* Align the text to the right (like typical calculators) */
+    color: white; /* White text color */
+    padding: 5px; /* Small padding for spacing */
+    font-size: 40px; /* Large font for visibility */
+}
+
+/* Style the button grid */
+.buttons {
+    width: 100%; /* Full width */
+    display: grid; /* Create a grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-auto-rows: 60px; /* Each button has a height of 60px */
+}
+
+/* General button styling */
+.button {
+    background-color: transparent; /* Transparent button background */
+    color: white; /* White text */
+    box-shadow: .5px .5px rgba(0, 0, 0, 0.825); /* Light shadow for 3D effect */
+    font-size: 1.3rem; /* Font size for the button text */
+    text-align: center; /* Center the button content */
+    outline: none; /* Remove default button outline */
+}
+
+/* Styling for operator buttons (+, -, *, /) */
+.operator {
+    color: rgba(255, 166, 0, 0.927); /* Orange color for operators */
+    background-color: rgba(7, 7, 7, 0.628); /* Dark background with slight transparency */
+}
+
+/* Styling for the equals button */
+.equals {
+    background-color: rgba(255, 166, 0, 0.927); /* Orange background for emphasis */
+    grid-row: span 2; /* Span across 2 rows for a taller button */
+    border-bottom-right-radius: 10px; /* Rounded corner on the bottom-right */
+}
+
+/* Modular button */
+.modular {
+    border-bottom-left-radius: 10px; /* Rounded corner on the bottom-left */
+}

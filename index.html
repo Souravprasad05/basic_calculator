@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage (displayed on the browser tab) -->
+    <title>Calculator</title>
+
+    <!-- Linking the icon for the calculator (favicon) -->
+    <link rel="icon" href="./images/Calculator_512.webp">
+    
+    <!-- Linking the external stylesheet for styling the calculator -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container for the calculator -->
+    <div class="calculator">
+        <!-- Input field to display the result or the entered expression -->
+        <input type="text" class="display" name="display" placeholder="0">
+
+        <!-- Container for all the calculator buttons -->
+        <div class="buttons">
+            <!-- Clear button: resets the display -->
+            <button class="button operator" onclick="display.value=''">C</button>
+
+            <!-- Division button: appends '/' symbol to the expression -->
+            <button class="button operator" onclick="append('/')">&divide;</button>
+
+            <!-- Multiplication button: appends '*' symbol to the expression -->
+            <button class="button operator" onclick="append('*')">&times;</button>
+
+            <!-- Delete button: removes the last character in the display -->
+            <button class="button operator" onclick="display.value=display.value.toString().slice(0,-1)">del</button>
+
+            <!-- Number buttons (7, 8, 9) -->
+            <button class="button numers" onclick="append('7')">7</button>
+            <button class="button numers" onclick="append('8')">8</button>
+            <button class="button numers" onclick="append('9')">9</button>
+
+            <!-- Subtraction button: appends '-' symbol to the expression -->
+            <button class="button operator" onclick="append('-')">-</button>
+
+            <!-- Number buttons (4, 5, 6) -->
+            <button class="button numers" onclick="append('4')">4</button>
+            <button class="button numers" onclick="append('5')">5</button>
+            <button class="button numers" onclick="append('6')">6</button>
+
+            <!-- Addition button: appends '+' symbol to the expression -->
+            <button class="button operator" onclick="append('+')">+</button>
+
+            <!-- Number buttons (1, 2, 3) -->
+            <button class="button numers" onclick="append('1')">1</button>
+            <button class="button numers" onclick="append('2')">2</button>
+            <button class="button numers" onclick="append('3')">3</button>
+
+            <!-- Equals button: triggers the calculation of the expression -->
+            <button class="button equals" onclick="calculate()">=</button>
+
+            <!-- Modular button: appends '%' symbol to the expression -->
+            <button class="button numers modular" onclick="append('%')">%</button>
+
+            <!-- Number buttons (0) and decimal point (.) -->
+            <button class="button numers" onclick="append('0')">0</button>
+            <button class="button numers" onclick="append('.')">.</button>
+        </div>
+    </div>
+
+    <!-- Linking the external JavaScript file for handling the calculator's functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>
